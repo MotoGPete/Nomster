@@ -1,7 +1,17 @@
 class PlacesController < ApplicationController
 
 	def index
-		@places = Place.all
+		@places = Place.order(:name).page(params[:page]).per(10)
+
+	end
+
+	def new
+		@place = Place.new
+	end
+
+	def total_places
+		return Place.count
 	end
 
 end
+
