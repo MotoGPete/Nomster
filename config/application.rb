@@ -1,4 +1,4 @@
-config.assets.initialize_on_precompile = false
+
 
 require_relative 'boot'
 
@@ -24,5 +24,6 @@ module Nomster
 
     # Precompile additional assets
     config.assets.precompile += %w( .svg .eot .ttf .woff)
+    config.assets.initialize_on_precompile = false
   end
 end
