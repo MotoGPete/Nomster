@@ -101,6 +101,7 @@
 
 <% @place.photos.each do |photo| %>
   <% if photo.caption.present? %>
+    <%= image_tag photo.picture.url %>
     <%= photo.caption %>
   <% end %>
   <small><%= photo.user.email %></small>
