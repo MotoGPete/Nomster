@@ -25,8 +25,8 @@
 
   </div>
   <div>
-    <% if place.photos.first.present? %>
-    <img><%= image_tag place.photos.first.picture.url %></div><img>
+    <% if place.photos.present? %>
+    <%= image_tag place.photos.last.picture.url %></div>
     
   
   	<% end %>
